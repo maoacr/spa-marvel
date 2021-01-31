@@ -1,10 +1,17 @@
-const Favoroites = () => {
+import favourites from '../assets/images/favourites.png';
+
+const Favorites = () => {
   const view = `
-    <section class="Favorites-container">
-      <h4>Favorites list</h4>
+    <section class="Favorites-section">
+      <div>
+        <img src=${favourites}/>
+        <h2>Favourites</h2>
+      </div>
+      <div class="Favorites-comics" id="Favorites-comics">
+      </div>
     </section>
   `
-  return view;
+  return view
 }
 
-export default Favoroites;
+export default Favorites

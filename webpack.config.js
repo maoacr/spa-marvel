@@ -19,6 +19,17 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 }
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i, 
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'assets/',
+                    publicPath: 'assets/',
+                    emitFile: true,
+                    esModule: false
+                }
             }
         ]
     },

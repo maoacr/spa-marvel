@@ -1,13 +1,17 @@
+import marvel from '../assets/images/marvelLogo.png';
+import search from '../assets/images/search.png';
+
 const Header = () => {
   const view = `
     <header>
       <div class="Header-logo">
         <a href="/">
-          Aquí va el Logo
+          <img src="${marvel}" alt=Logo marvel"" />
         </a>
       </div>
       <div class="Header-search">
-        <h1>Aquí va el buscador</h1>
+        <input type="text" placeholder="Search character"/>
+        <button type="submit"><img src="${search}" ></img></button>
       </div>
     </header>
   `
