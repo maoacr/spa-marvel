@@ -2,8 +2,12 @@ import favourites from '../assets/images/favourites.png';
 import getData from '../utils/getData';
 import getComic from '../utils/getComic';
 
+// const searchBar = null || document.getElementById('searchBar');
+// console.log(searchBar);
+
 const Home = async () => {
   const characters = await getData();
+
   
   const view = `
       <section class="Favorites-section">
@@ -31,7 +35,7 @@ const Home = async () => {
             <h4>Related comics</h4>
             ${
               character.comics.items.map(comic => `
-                <button onclick=${getComic(comic.resourceURI)}>${comic.name}</button>
+                <button onclick="clickButton(event, '${comic.resourceURI}')" >${comic.name}</button>
               `).join('')
             }
           </div>
